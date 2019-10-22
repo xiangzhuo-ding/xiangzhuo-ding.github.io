@@ -4,6 +4,26 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
+
+  <style>
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+      }
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        /* border-inline: 1px solid rgba(0, 0, 0, 0.1); */
+        padding: 10px;
+        font-size: 30px;
+        text-align: center;
+      }
+      
+      </style>
+
+
 <meta charset="utf-8">
 <title>Vehicle Simulator </title>
 <meta name="description" content="Xiangzhuo Ding">
@@ -95,9 +115,25 @@
       <p>
       This Vehicle Simulator is a part of my course projects. You can click <a href="https://github.com/xiangzhuo-ding/vehicle_simulator" target="_blank" style="color: blue;"><u>here</u></a> to view the code.
       </p>
-      <img src = "img/real.gif">
-      <img src = "img/simulate.gif">
 
+      <div class="grid-container">
+        <div class="grid-item">
+            <img src="img/vs/real.gif"  alt="Tesla" >
+            <h5>Real video of a drifting Tesla compare to the simulation.</h5>
+        </div> 
+        <div class="grid-item">
+          <img src="img/vs/simulate.gif"  alt="Simulation" >
+        </div> 
+      </div>
+
+      <div class="grid-container">
+          <div class="grid-item">
+            <img src="img/vs/turn.gif"  alt="Obstacle avoiding and trajectory following " >
+       
+          <h5>This is a animation of a vehicle trying to maintain the desired trajectory using PD control.</h5>
+        </div>
+        </div>
+      <embed src="./files/report.pdf" width = 100% height="900">
     </div><!-- /.article-wrap -->
     
   </article>
