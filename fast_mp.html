@@ -8,7 +8,23 @@
 <title>Fast Motion Planning </title>
 <meta name="description" content="Xiangzhuo Ding">
 <meta name="keywords" content="">
+<style>
 
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 10px;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-inline: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      font-size: 30px;
+      text-align: center;
+    }
+    
+    </style>
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
@@ -91,12 +107,27 @@
       <hr />
 
 
-      <h3 id="secure-outsourced-middleboxes">Fast Motion Planning</h3>
+      <!-- <h3 id="secure-outsourced-middleboxes">Fast Motion Planning</h3> -->
       <p>Fast and robust motion planning is an essential requirement for efficient robot deployments such as a robot arm or mobile robot. During my time at RVBUST, I developed a method to embed deep neural networks into the RRT algorithm. The result suggests that our algorithm can save up to 70% of the time compared to the state-of-the-art motion planning algorithm.</p>
-      <img src = "img/mp.gif" width="450" height="245">
+      <img src = "img/mp/mp.gif" width="450" height="245">
 
     </div><!-- /.article-wrap -->
     
+    <div class="grid-container">
+        <div class="grid-item">
+          <h3>Sampling (2d example)</h3>
+          <img src="./img/mp/sampling.png"  alt="map" >
+          <img src="./img/mp/map.png"  alt="map" >
+          <h3>Result</h3>
+          <img src="./img/mp/mpresult.png" width=70% alt="map" >
+          <h3>Initial planning and repair (2d example)</h3>
+          <img src="./img/mp/planning.png"  alt="map" >
+          
+            
+        </div>  
+      </div>
+
+
   </article>
 </div><!-- /#index -->
 
