@@ -4,25 +4,38 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
+<style>
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+</style>
 <meta charset="utf-8">
 <title>Xiangzhuo Ding's Projects </title>
-<meta name="description" content="Xiangzhuo Ding">
+<meta name="description" content="Xiangzhuo Ding's Projects">
 <meta name="keywords" content="">
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xiangzhuo Ding">
-<meta property="og:description" content="Xiangzhuo Ding">
+<meta property="og:title" content="Han You's site">
+<meta property="og:description" content="Xiangzhuo Ding's Projects ">
 <meta property="og:url" content="https://xiangzhuo-ding.github.io">
-<meta property="og:site_name" content="Xiangzhuo Ding">
+<meta property="og:site_name" content="Xiangzhuo Ding's Projects ">
 
 
-<link href="js/feed.xml" type="application/atom+xml" rel="alternate" title="Xiangzhuo Ding Feed">
-<link rel="canonical" href="https://xiangzhuo-ding.github.io">
-
-<!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +58,7 @@
 <script src="js/modernizr-2.7.1.custom.min.js"></script>
 
 
+
 </head>
 
 <body class="page">
@@ -53,14 +67,14 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="https://john-you.github.io">Xiangzhuo Ding's Project</a>
+		<a href="https://xiangzhuo-ding.github.io">Xiangzhuo Ding</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<div class="navbar">
-        <a href="./index.html">Home</a>
-        <a href="https://github.com/xiangzhuo-ding" target="_blank">GitHub</a> 
+		  <a href="./index.html">Home</a>
+		  <a href="https://github.com/xiangzhuo-ding" target="_blank">GitHub</a> 
 	      <a href="./project.html">My Projects</a>
-	      <a href="./files/XiangzhuoDingResume.pdf" target="_blank">Resume</a> 
+		  <a href="./files/XiangzhuoDingResume.pdf" target="_blank">Resume</a> 
 	    </div>
 	</div><!-- /.top-navigation -->
 </div><!-- /.navigation-wrapper -->
@@ -73,73 +87,53 @@
     
   alt=" feature image">
   
-  </div>
+  </div><!-- /.image-wrap -->
 
 
 <div id="main" role="main">
-  <div class="article-author-side">
-    
-	<img src="img/head2.png" class="bio-photo" alt="Xiangzhuo Ding bio photo"></a>
+    <div class="article-author-side">
+        <img src="img/head2.png" class="bio-photo" alt="Xiangzhuo Ding bio photo"></a>
+        <h3>Xiangzhuo Ding</h3>
+        <p>New York, NY 10025</p>
+        <a href="https://www.linkedin.com/in/xiangzhuo-ding/" class="author-social" target="_blank"><img class="iconimg" src="img/linkedin.png"> Linkedin</a>
+        <a href="https://github.com/xiangzhuo-ding" class="author-social" target="_blank"><img class="iconimg" src="img/github-icon.png"> Github</a>
+        <a href="mailto:xd2212@columbia.edu" class="author-social" target="_blank"><img class="iconimg" src="img/email-icon.png"> Email</a>
+      </div>
 
-<h3>Xiangzhuo Ding</h3>
-<p>What doesn't kill you makes you stronger.</p>
-
-
-
-<a href="https://www.linkedin.com/in/xiangzhuo-ding/" class="author-social" target="_blank"><img class="iconimg" src="img/linkedin.png"> Linkedin</a>
-
-<a href="https://github.com/xiangzhuo-ding" class="author-social" target="_blank"><img class="iconimg" src="img/github-icon.png"> Github</a>
-
-<a href="mailto:xd2212@columbia.edu" class="author-social" target="_blank"><img class="iconimg" src="img/email-icon.png"> Email</a>
-
-
-
-
-  </div>
-  <article>
-    <h1>Selected Projects</h1>
-    <div class="article-wrap">
-      <hr />
-      <h3 id="secure-outsourced-middleboxes">Gait Analysis Based on Deep Learning</h3>
-      <p>In this project, we present a Recurrent Neural Network classifier model that segments the walking data recorded with instrumented footwear. The signals from three piezoresistive sensors, a 3-axis accelerometer, and Euler angles are used to generate temporal gait characteristics of a user. We were able to merge all sensor data from the instrumented footwear without any data preprocessing, or any human intervention, to generate gait characteristics. This greatly reduces the processing time and makes the technology amenable for real-time applications.</p>
-      <img src = "img/shoe.png">
-      <br><br>
-
-      <h3 id="secure-outsourced-middleboxes">Fast Motion Planning</h3>
-      <p>Fast and robust motion planning is an essential requirement for efficient robot deployments such as a robot arm or mobile robot. During my time at RVBUST, I developed a method to embed deep neural networks into the RRT algorithm. The result suggests that our algorithm can save up to 70% of the time compared to the state-of-the-art motion planning algorithm.</p>
-      <img src = "img/mp.gif" width="450" height="245">
-      <br><br>
-
-      <h3 id="secure-outsourced-middleboxes">Intelligent Electric Self-Balancing Scooters</h3>
-      <p>
-      In 2016, two students and I started a program designing intelligent multiple-functional electric self-balancing scooter. The system can switch from self-balancing scooter to bicycle expediently. The modeling and analysis practice within the program, which was completed mainly by CAD and CAE software, helped us successfully realize 3D modeling. Finally, we came up with a fordable structure by using multiple mobile parts, which has both the function of self-balancing scooters and bicycle without any compromise on its performance. And as a result, a national award and a <a href="./files/patent.pdf" target="_blank" style="color: blue;"><u>patent</u></a> were achieved.</p>
-      <iframe width="550" height="315" src="https://www.youtube.com/embed/nkHCSxH6snw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br><br>
-      
-      <h3 id="secure-outsourced-middleboxes"><a href="https://github.com/xiangzhuo-ding/vehicle_simulator" target="_blank" ><u>Vehicle Simulator</u></a></h3>
-      <p>
-      This Vehicle Simulator is a part of my course projects. You can click <a href="https://github.com/xiangzhuo-ding/vehicle_simulator" target="_blank" style="color: blue;"><u>here</u></a> to view the code.
-      </p>
-      <img src = "img/real.gif">
-      <img src = "img/simulate.gif" width="550" height="345">
-      <br><br>
+<article> 
+  <div class="grid-container">
+      <div class="grid-item">
+          <img src="./img/shoe.png" width=180% alt="Gait Analysis Based on Deep Learning" >
+          <h3><a href="gait.html"><u>Gait Analysis Based on Deep Learning</u></a> </h3>
+      </div>
 
 
+      <div class="grid-item">
+          <img src="./img/mp.gif" width=40% alt="Fast Motion Planning" >
+          <h3><a href="fast_mp.html"><u>Fast Motion Planning</u></a> </h3>
+      </div>
 
-      <br />
-      <br />
-    </div><!-- /.article-wrap -->
+
+      <div class="grid-item">
+          <img src="./img/simulate.gif" width=180% alt="Vehicle Simulator" >
+          <h3><a href="vehicle.html"><u>Vehicle Simulator</u></a> </h3>
+      </div>
+
+
+      <div class="grid-item">
+          <iframe height = 65% weidth = 15% src="https://www.youtube.com/embed/nkHCSxH6snw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h3><a href="scooter.html"><u>Intelligent Electric Self-Balancing Scooter</u></a> </h3>
+      </div>  
+    </div>
     
   </article>
-</div><!-- /#index -->
+</div>
 
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="https://johnyou.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="https://xyuancs.github.io/assets/js/scripts.min.js"></script>
-
-          
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/scripts.min.js"></script>
 
 </body>
 </html>

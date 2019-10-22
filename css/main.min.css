@@ -3686,7 +3686,7 @@ body {
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    * zoom: 1
+    zoom: 1
 }
 
 .navigation-wrapper:before, .navigation-wrapper:after {
@@ -4006,7 +4006,7 @@ body {
     #main article {
         display: inline;
         float: left;
-        width: 50%;
+        width: 70%;
         margin-right: 0;
         margin-left: 0
     }
@@ -4016,7 +4016,7 @@ body {
     #main article {
         display: inline;
         float: left;
-        width: 37.5%
+        width: 50%
     }
 }
 
@@ -5120,7 +5120,6 @@ img.mfp-img {
 }
 
 @media screen and (max-width:800px) and (orientation:landscape), screen and (max-height:300px) {
-    {}
 
     .mfp-img-mobile .mfp-image-holder {
         padding-right: 0;
