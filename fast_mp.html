@@ -138,7 +138,7 @@
       </div>
 
       <h3>RRT Embeded with Neural Network</h3>
-      <p>Instead of directly using collision check libraries like FCL or Bullet in the RRT algorithm, we use the Neural Network as a  filter to decide whether an accurate but expensive kinematic collision check is necessary. If the Neural Network is very confident that there will be a collision, then we trust its result and proceed to the next configuration point. If the prediction is ambiguous, an accurate collision check will be applied.</p>
+      <p>Instead of directly using collision check libraries like FCL or Bullet in the RRT algorithm, we use the Neural Network as a  filter to decide whether an accurate but expensive kinematic collision check is necessary. If the Neural Network is very confident that there will be or will not be a collision, then we trust its result and proceed to the next configuration point. If the prediction is ambiguous, an accurate collision check will be applied.</p>
       <p>After the first planning, we will go through the generated path to see if there is any invalid segment. Once the segment is repaired, we will guarantee to get a safe path.</p>
       <div class="grid-container">
         <div class="grid-item">     
