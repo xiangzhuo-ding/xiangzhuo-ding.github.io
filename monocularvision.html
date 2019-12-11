@@ -1,0 +1,172 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150940586-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150940586-1');
+</script>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Vehicle Pose Estimation Based On Monocular Vision </title>
+<meta name="description" content="Xiangzhuo Ding">
+<meta name="keywords" content="">
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xiangzhuo Ding">
+<meta property="og:description" content="Xiangzhuo Ding">
+<meta property="og:url" content="https://xiangzhuo-ding.github.io">
+<meta property="og:site_name" content="Xiangzhuo Ding">
+
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main.min.css">
+<link rel="stylesheet" href="css/academicons.css" />
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="https://xyuancs.github.io/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="https://xyuancs.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="js/modernizr-2.7.1.custom.min.js"></script>
+
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="https://xiangzhuo-ding.github.io">Xiangzhuo Ding's Project</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<div class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="https://github.com/xiangzhuo-ding" target="_blank">GitHub</a> 
+	      <a href="./project.html">My Projects</a>
+	      <a href="./files/XiangzhuoDingResume.pdf" target="_blank">Resume</a> 
+	    </div>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "./img/newyork.jpg"
+    
+  alt=" feature image">
+  
+  </div>
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    <img src="img/head2.png" class="bio-photo" alt="Xiangzhuo Ding bio photo"></a>
+    <h3>Xiangzhuo Ding</h3>
+    <p>New York, NY 10025</p>
+    <a href="https://www.linkedin.com/in/xiangzhuo-ding/" class="author-social" target="_blank"><img class="iconimg" src="img/linkedin.png"> Linkedin</a>
+    <a href="https://github.com/xiangzhuo-ding" class="author-social" target="_blank"><img class="iconimg" src="img/github-icon.png"> Github</a>
+    <a href="mailto:xd2212@columbia.edu" class="author-social" target="_blank"><img class="iconimg" src="img/email-icon.png"> Email</a>
+  </div>
+
+
+  <article>
+    
+    <h1>Vehicle Pose Estimation Based On Monocular Vision</h1>
+    <div class="article-wrap">
+      <hr />
+      <h3>1. Introduction</h3>
+      <div class="grid-container">
+        <div class="grid-item">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/lXcQCQgaTwM?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+        </div>  
+      </div>
+      <br>
+      <p>The concept of autonomous driving has been studied for years. One discomforting fact is that more and more highly accurate but expensive sensors are being added to self-driving vehicles, which greatly limits its affordability. There have been some efforts using only cameras to map the road and detecting nearby vehicles. Many challenges still remain but we want to make some contribution to it. The goal of this project is to develop an algorithm to estimate the absolute pose of vehicles (6 degrees of freedom) from a single image in a real-world traffic environment. The result suggests that with a well-designed system, a monocular vision is sufficient to make a reliable estimation in a self-driving problem.</p>
+      
+      <h3>2. Dataset</h3>
+      <p>Our dataset comes from the kaggle competition <a href="https://www.kaggle.com/c/pku-autonomous-driving/overview" target="_blank"><u>“Peking University/Baidu - Autonomous Driving”</u></a>. It contains 60,000 labeled 3D car instances from 5,277 real-world images. Each sample contains information on the absolute pose of the information. For example, the labels are as follows: 
+      </p>
+      <img src="./img/selfdriving/label.png"  alt="map" >
+      <p>The 3D Car models are also available and they are used in determining the model type of the specific cars in the image. Image Masks are also used to filter out irrelevant cars that do not need to be predicted.  </p>
+      <img src="./img/selfdriving/dataexample.png"  alt="map" >
+
+      <h3>3. Method</h3>
+      <h3>3.1. Data Preprocessing</h3>
+      <p>For the data preprocessing, we borrow the code from Ruslan Baynazarov[5], who provided some excellent works on this project as a baseline. For the input image, since cars can’t fly and all vehicles exist on the bottom half of the image, the images were cropped by half and resized to a reasonable resolution. He later added two mesh channels to the image for better positioning. After testing we found out that mesh channels didn’t affect the performance of the model so much but introduced more parameters, so we remove them.</p>
+      <br>
+      <p>When constructing training labels, eight channels were built based on the ground truth. The first channel is heatmap, which is the center point of the vehicle mapped in a 2d image. The original heatmap[5] was generated by the way that only the points that are overlain with the center point are labeled as 1, whereas other points are 0. Inspired by the work of CenterNet[4], we also labeled the surrounding points of the true center points to 0.5 for a reduced negative loss. The position and pose of the detected vehicles were regressed by the other 7 channels. Because the distribution of pitch is around 0 and ± pi, to better regress pitch, Ruslan converts it to cos(pitch) and sin(pitch)[5]. Now the 7 channels are x, y, z, roll, pitch_sin, pitch_cos, yaw.</p>
+      <img src="./img/selfdriving/heatmap.png" width=50% alt="map" >
+      <p>We also explored the possibility of using the output in the spherical coordinate frame instead of the cartesian coordinate frame. In that way we converted the position from x, y, z to r, theta, phi and ran some tests. More details about that will be discussed later.</p>
+
+      <h3>3.2. Network Architecture</h3>
+      <p>UNet[6] has been proven to outperform many architectures in the medical image segmentation problem. The key ideal of UNet is using an encoder, a decoder and skipped connections. As is shown in the figure, the main structure of our network is a UNet-like encoder. Double convolution layers with max-pooling are applied here to encode the image. The size of the input data is scaled down from 320X1024 to 20X64, and the number of channels is expended to 1024. After that, we borrowed the code from LeeJunHyun to add attention modules[7]. A pre-trained EfficientNet[8] is also used here to provide the gate signal. The reason we did this is trying to use the features extracted by EfficientNet to let the model know which part of the encoded information it needs to pay attention to, i.e, add weights to it. Afterward, the weighted outputs are concatenated with the EfficientNet output and up-sampled. Later the up-sampled features will be used again as another gate signal to weight the features of the previous layer output.</p>
+      <img src="./img/selfdriving/architecture.png"  alt="map" >
+      <p>The shape of the final output is 8X40X128. Follow the ideal of CenterNet[4], the first channel of the output will be a heatmap, which produces the possibility of the pixel representing a vehicle. We tried many ways to extract predictions from a heatmap. The original one proposed in the baseline model and also the easiest one is setting up a threshold[5]. Several problems exist such as duplicated predictions on the same vehicle and missing some local maximum. To address this issue, we developed a peak detection algorithm. The algorithm works by detecting the points that have values greater than all its surrounding points. Based on the heatmap prediction, we regress the pose information by the rest of the seven channels that represent each of the attributes. </p>
+
+      <h3>4. Training</h3>
+      <p>We trained models and conducted experiments on the following environment:</p>
+      <br>
+      <p>Four Tesla k4 GPU </p>
+      <p>7.5 GB 4 core CPU </p>
+      <p>Pytorch - running on parallel computing</p>
+      <br>
+        
+      <p>We have tried many ways to improve the baseline notebook that was offered on kaggle. This range from converting the labels from the raw x,y, z coordinates to spherical coordinates. Also, increase the output heatmap resolution, but these alternation does not improve results significantly. Validating the result of these findings took many days. We ran many GCP instances with GPU and a new set of higher resolution heatmaps were generated. </p>
+      <br>
+      <p>The best result still comes from unaltered pose information combine with the attention mechanism on the upsample.  We train with a batch size of 16, which is the maximum amount of memory allowed for the GPU’s that we have. The learning rate is 0.00. Below is the training loss for our model. 
+      </p>
+      <img src="./img/selfdriving/training.png"  alt="map" >
+
+      <h3>5. Result</h3>
+      <p>Following are some examples of results of test set, which were never seen by the network.</p>
+      <img src="./img/selfdriving/result1.png"  alt="map" >
+      <img src="./img/selfdriving/result2.png"  alt="map" >
+      <img src="./img/selfdriving/result3.png"  alt="map" >
+
+      
+    </div><!-- /.article-wrap -->
+    
+  </article>
+</div><!-- /#index -->
+
+<!-- <div class="footer-wrap">
+    <footer>
+      <span>The research has been submitted to IEEE ICRA. More detail will be updated after the publication.</span>
+  
+    </footer>
+  </div> -->
+
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://johnyou.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://xyuancs.github.io/assets/js/scripts.min.js"></script> -->
+
+          
+
+</body>
+</html>
