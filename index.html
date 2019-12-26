@@ -8,6 +8,27 @@
   gtag('config', 'UA-150940586-1');
 </script>
 
+
+<style>
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    /* border-bottom: 2px solid rgba(55, 187, 240, 0.5); */
+    /* border-inline: 1px solid rgba(0, 0, 0, 0.1); */
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  </style>
+
+
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
@@ -91,7 +112,7 @@
 
 <div id="main" role="main">
   <div class="article-author-side">
-    <img src="img/head2.png" class="bio-photo" alt="Xiangzhuo Ding bio photo"></a>
+    <img src="img/head3.png" class="bio-photo" alt="Xiangzhuo Ding bio photo"></a>
     <h3>Xiangzhuo Ding</h3>
     <p>New York, NY 10025</p>
     <a href="https://www.linkedin.com/in/xiangzhuo-ding/" class="author-social" target="_blank"><img class="iconimg" src="img/linkedin.png"> Linkedin</a>
@@ -104,20 +125,83 @@
     <div class="article-wrap">
       <hr />
 
-        <h3 id="overview">Welcome to my personal website!</h3>
+        <h1 id="overview">Welcome to my personal website!</h1>
 
-        <p>My name is Xiangzhuo. I'm currently enrolled as an MS student at Columbia University, majored in Mechanical Engineering. I'm now looking for a full-time position in the engineering industry. I'm expecting to graduate in Dec 2019.</p>
-
-        <br />
+        <p>My name is Xiangzhuo. In Dec 2019, I graduated from Columbia University as an MS student. I'm now looking for a full-time position in the tech industry.</p>
+        &nbsp;
         <p>I define myself as a fast learning engineer who wants to contribute time, knowledge, and skills to make a difference. If you want to learn more about me, please do not hesitate to contact me.</p>
 
         <hr />
+    </div><!-- /.article-wrap -->  
+  <!-- </article>
+
+
+  <article>  -->
+    <h2>Selected Projects</h2>
+    <hr/>
+    <div class="grid-container">
+  
+        <div class="grid-item">
+            <a href="monocularvision.html"><img src="./img/selfdriving/1.png" width=100% alt="Vehicle Pose Estimation Based On Monocular Vision" ></a>
+            <h3><a href="monocularvision.html"><u>Vehicle Pose Estimation Based On Monocular Vision</u></a> </h3>
+          <h5>Computer Vision, Self-driving, 3D Object Detection</h5>
+        </div>
+
+        <div class="grid-item">
+          <a href="gait.html"><img src="./img/gait/gait.png" width=100% alt="Gait Analysis Based on Deep Learning" ></a>
+          <h3><a href="gait.html"><u>Gait Analysis Based on Deep Learning</u></a> </h3>
+        <h5>Recurrent Neural Networks, Gait Analysis, Instrumented Footwear</h5>
+      </div>
+
+
+  
+      <div class="grid-item">
+          <a href="fast_mp.html"><img src="./img/mp/mp.gif" width = 100% alt="Fast Motion Planning" ></a>
+      <!-- </div>
+      <div class="grid-item"> -->
+        <h3><a href="fast_mp.html"><u>Fast Motion Planning</u></a> </h3>
+        <h5>Motion Planning, Hybrid RRT, Deep Learning, Collision Check</h5>
+      </div>
+  
+      <div class="grid-item">
+          <a href="https://github.com/xiangzhuo-ding/simple_mlp" target="_blank"><img src="./img/deeplearning.jpg" width = 100% alt="Deep Learning" ></a>
+      <!-- </div>
+      <div class="grid-item"> -->
+        <h3><a href="https://github.com/xiangzhuo-ding/simple_mlp" target="_blank"><u>Hand Written Deep Neural Network Using Numpy</u></a> </h3>
+        <h5>Deep Learning, Numpy, Classifier, Backward Propagation</h5>
+      </div>
+  
+      <div class="grid-item">
+        <a href="ROS_Projects.html"><img src="./img/ros/ik2.gif" width = 100% alt="ROS Projects" ></a>
+      <!-- </div>
+      <div class="grid-item"> -->
+        <h3><a href="ROS_Projects.html"><u>ROS Projects Collection</u></a> </h3>
+        <h5>Kinematics, Cartesian Control, Motion Planning, State Estimator</h5>
+      </div>
+  
+      <div class="grid-item">
+          <a href="vehicle.html"><img src="./img/vs/vs.gif" width = 100% alt="Vehicle Simulator" ></a>
+      <!-- </div>
+      <div class="grid-item"> -->
+        <h3><a href="vehicle.html"><u>Vehicle Dynamics Simulator</u></a> </h3>
+        <h5>Dynamics, Tracking Control, Vehicle, Matlab</h5>
+      </div>
+  
+      <div class="grid-item">
+          <!-- <iframe  src="https://www.youtube.com/embed/nkHCSxH6snw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <a href="scooter.html"><img src="./img/scooter.gif"  alt="Scooter" ></a>
+      <!-- </div>  
+      <div class="grid-item"> -->
+        <h3><a href="scooter.html"><u>Intelligent Electric Self-Balancing Scooter</u></a> </h3>
+        <h5>Computer-aided Design, Scooter, Bicycle</h5>
+      </div>  
+    </div>
+      
+    </article>
 
 
 
-    </div><!-- /.article-wrap -->
-    
-  </article>
+
 </div><!-- /#index -->
 
 
